@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;double>' to 'sin_or_cos_double_s'." projectName="dft" solutionName="solution1" date="2023-04-15T11:35:39.842+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hotbm_::sin_or_cos&lt;double>' to 'sin_or_cos&lt;double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238)" projectName="dft" solutionName="solution1" date="2023-04-15T11:35:39.470+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:425: variable-indexed range selection may cause suboptimal QoR." projectName="dft" solutionName="solution1" date="2023-04-15T11:35:37.727+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/Virtex-7/Virtex-7_fpv7'." projectName="dft" solutionName="solution1" date="2023-04-15T11:35:27.869+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'D:/Xilink/Vivado/2020.1/common/technology/xilinx/Virtex-7/Virtex-7_fpv7.lib'." projectName="dft" solutionName="solution1" date="2023-04-15T11:35:26.448+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/Virtex-7/Virtex-7'." projectName="dft" solutionName="solution1" date="2023-04-15T11:35:26.445+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'D:/Xilink/Vivado/2020.1/common/technology/xilinx/Virtex-7/Virtex-7.lib'." projectName="dft" solutionName="solution1" date="2023-04-15T11:35:26.441+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

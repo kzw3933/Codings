@@ -1,0 +1,340 @@
+
+
+================================================================
+== Vivado HLS Report for 'convolution'
+================================================================
+* Date:           Wed Apr 19 11:51:06 2023
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        convolution
+* Solution:       solution1
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1157-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.750 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      793|      793| 7.930 us | 7.930 us |  793|  793|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------+-------------+---------+---------+----------+----------+-----+-----+---------+
+        |                        |             |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |        Instance        |    Module   |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +------------------------+-------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_Process_r_fu_254    |Process_r    |      154|      154| 1.540 us | 1.540 us |  154|  154|   none  |
+        |grp_Offload_Out_fu_260  |Offload_Out  |      792|      792| 7.920 us | 7.920 us |  792|  792|   none  |
+        +------------------------+-------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|       2|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        4|      -|    3519|    8632|    -|
+|Memory           |        0|      -|    3584|     392|    0|
+|Multiplexer      |        -|      -|       -|      60|    -|
+|Register         |        -|      -|       4|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        4|      0|    7107|    9086|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     2060|   2800|  607200|  303600|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |    ~0   |      0|       1|       2|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+---------------------------+---------+-------+------+------+-----+
+    |           Instance          |           Module          | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +-----------------------------+---------------------------+---------+-------+------+------+-----+
+    |grp_Offload_Out_fu_260       |Offload_Out                |        0|      0|  1882|   733|    0|
+    |grp_Process_r_fu_254         |Process_r                  |        0|      0|   613|  6739|    0|
+    |convolution_Out_ddr_m_axi_U  |convolution_Out_ddr_m_axi  |        2|      0|   512|   580|    0|
+    |convolution_W_ddr_m_axi_U    |convolution_W_ddr_m_axi    |        2|      0|   512|   580|    0|
+    +-----------------------------+---------------------------+---------+-------+------+------+-----+
+    |Total                        |                           |        4|      0|  3519|  8632|    0|
+    +-----------------------------+---------------------------+---------+-------+------+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +------------+---------------------+---------+----+----+-----+------+-----+------+-------------+
+    |   Memory   |        Module       | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------+---------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Out_0_0_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_1_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_2_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_3_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_4_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_5_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_6_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_7_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_8_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_9_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_10_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_11_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_12_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_0_13_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_0_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_1_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_2_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_3_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_4_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_5_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_6_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_7_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_8_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_9_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_10_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_11_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_12_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_1_13_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_0_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_1_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_2_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_3_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_4_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_5_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_6_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_7_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_8_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_9_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_10_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_11_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_12_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_2_13_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_0_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_1_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_2_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_3_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_4_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_5_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_6_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_7_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_8_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_9_U   |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_10_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_11_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_12_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    |Out_3_13_U  |convolution_Out_0_0  |        0|  64|   7|    0|    14|   32|     1|          448|
+    +------------+---------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total       |                     |        0|3584| 392|    0|   784| 1792|    56|        25088|
+    +------------+---------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state2_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |Total                            |          |      0|  0|   2|           1|           1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+----+-----------+-----+-----------+
+    |       Name      | LUT| Input Size| Bits| Total Bits|
+    +-----------------+----+-----------+-----+-----------+
+    |Out_ddr_AWVALID  |   9|          2|    1|          2|
+    |Out_ddr_BREADY   |   9|          2|    1|          2|
+    |Out_ddr_WVALID   |   9|          2|    1|          2|
+    |W_ddr_ARVALID    |   9|          2|    1|          2|
+    |W_ddr_RREADY     |   9|          2|    1|          2|
+    |ap_NS_fsm        |  15|          3|    1|          3|
+    +-----------------+----+-----------+-----+-----------+
+    |Total            |  60|         13|    6|         13|
+    +-----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+---+----+-----+-----------+
+    |                 Name                | FF| LUT| Bits| Const Bits|
+    +-------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                            |  2|   0|    2|          0|
+    |grp_Offload_Out_fu_260_ap_start_reg  |  1|   0|    1|          0|
+    |grp_Process_r_fu_254_ap_start_reg    |  1|   0|    1|          0|
+    +-------------------------------------+---+----+-----+-----------+
+    |Total                                |  4|   0|    4|          0|
+    +-------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                  |  in |    1| ap_ctrl_hs |  convolution | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs |  convolution | return value |
+|ap_start                |  in |    1| ap_ctrl_hs |  convolution | return value |
+|ap_done                 | out |    1| ap_ctrl_hs |  convolution | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs |  convolution | return value |
+|ap_ready                | out |    1| ap_ctrl_hs |  convolution | return value |
+|m_axi_In_ddr_AWVALID    | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWREADY    |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWADDR     | out |   32|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWID       | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWLEN      | out |    8|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWSIZE     | out |    3|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWBURST    | out |    2|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWLOCK     | out |    2|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWCACHE    | out |    4|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWPROT     | out |    3|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWQOS      | out |    4|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWREGION   | out |    4|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_AWUSER     | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_WVALID     | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_WREADY     |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_WDATA      | out |   32|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_WSTRB      | out |    4|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_WLAST      | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_WID        | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_WUSER      | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARVALID    | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARREADY    |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARADDR     | out |   32|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARID       | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARLEN      | out |    8|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARSIZE     | out |    3|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARBURST    | out |    2|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARLOCK     | out |    2|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARCACHE    | out |    4|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARPROT     | out |    3|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARQOS      | out |    4|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARREGION   | out |    4|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_ARUSER     | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_RVALID     |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_RREADY     | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_RDATA      |  in |   32|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_RLAST      |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_RID        |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_RUSER      |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_RRESP      |  in |    2|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_BVALID     |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_BREADY     | out |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_BRESP      |  in |    2|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_BID        |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_In_ddr_BUSER      |  in |    1|    m_axi   |    In_ddr    |    pointer   |
+|m_axi_W_ddr_AWVALID     | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWREADY     |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWADDR      | out |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWID        | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWLEN       | out |    8|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWSIZE      | out |    3|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWBURST     | out |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWLOCK      | out |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWCACHE     | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWPROT      | out |    3|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWQOS       | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWREGION    | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWUSER      | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WVALID      | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WREADY      |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WDATA       | out |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WSTRB       | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WLAST       | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WID         | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WUSER       | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARVALID     | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARREADY     |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARADDR      | out |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARID        | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARLEN       | out |    8|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARSIZE      | out |    3|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARBURST     | out |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARLOCK      | out |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARCACHE     | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARPROT      | out |    3|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARQOS       | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARREGION    | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARUSER      | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RVALID      |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RREADY      | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RDATA       |  in |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RLAST       |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RID         |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RUSER       |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RRESP       |  in |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BVALID      |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BREADY      | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BRESP       |  in |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BID         |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BUSER       |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_Out_ddr_AWVALID   | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWREADY   |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWADDR    | out |   32|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWID      | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWLEN     | out |    8|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWSIZE    | out |    3|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWBURST   | out |    2|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWLOCK    | out |    2|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWCACHE   | out |    4|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWPROT    | out |    3|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWQOS     | out |    4|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWREGION  | out |    4|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_AWUSER    | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_WVALID    | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_WREADY    |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_WDATA     | out |   32|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_WSTRB     | out |    4|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_WLAST     | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_WID       | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_WUSER     | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARVALID   | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARREADY   |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARADDR    | out |   32|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARID      | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARLEN     | out |    8|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARSIZE    | out |    3|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARBURST   | out |    2|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARLOCK    | out |    2|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARCACHE   | out |    4|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARPROT    | out |    3|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARQOS     | out |    4|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARREGION  | out |    4|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_ARUSER    | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_RVALID    |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_RREADY    | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_RDATA     |  in |   32|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_RLAST     |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_RID       |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_RUSER     |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_RRESP     |  in |    2|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_BVALID    |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_BREADY    | out |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_BRESP     |  in |    2|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_BID       |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
+|m_axi_Out_ddr_BUSER     |  in |    1|    m_axi   |    Out_ddr   |    pointer   |
++------------------------+-----+-----+------------+--------------+--------------+
+

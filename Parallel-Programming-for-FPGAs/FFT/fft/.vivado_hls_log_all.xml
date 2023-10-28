@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft_stage.185' to 'fft_stage_185'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.299+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft_stage.184' to 'fft_stage_184'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.291+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft_stage.183' to 'fft_stage_183'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.284+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft_stage.182' to 'fft_stage_182'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.276+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft_stage.181' to 'fft_stage_181'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.265+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft_stage.180' to 'fft_stage_180'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.258+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft_stage.179' to 'fft_stage_179'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.251+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft_stage.178' to 'fft_stage_178'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.243+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'fft_stage.177' to 'fft_stage_177'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.239+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;double>' to 'sin_or_cos_double_s'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:34.233+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hotbm_::sin_or_cos&lt;double>' to 'sin_or_cos&lt;double>' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238)" projectName="fft" solutionName="solution1" date="2023-04-15T16:54:33.711+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'scaled_fixed2ieee&lt;63, 1>' to 'scaled_fixed2ieee' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:110:37)" projectName="fft" solutionName="solution1" date="2023-04-15T16:54:33.565+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'OUT_I' should be updated in process function 'fft_stage86', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.509+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'OUT_R' should be updated in process function 'fft_stage86', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.502+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[9]' should be updated in process function 'fft_stage.185', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.496+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[9]' should be updated in process function 'fft_stage.185', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.488+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[8]' should be updated in process function 'fft_stage.184', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.483+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[8]' should be updated in process function 'fft_stage.184', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.477+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[7]' should be updated in process function 'fft_stage.183', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.470+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[7]' should be updated in process function 'fft_stage.183', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.463+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[6]' should be updated in process function 'fft_stage.182', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.435+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[6]' should be updated in process function 'fft_stage.182', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.428+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[5]' should be updated in process function 'fft_stage.181', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.422+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[5]' should be updated in process function 'fft_stage.181', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.415+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[4]' should be updated in process function 'fft_stage.180', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.407+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[4]' should be updated in process function 'fft_stage.180', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.401+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[3]' should be updated in process function 'fft_stage.179', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.394+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[3]' should be updated in process function 'fft_stage.179', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.388+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[2]' should be updated in process function 'fft_stage.178', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.381+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[2]' should be updated in process function 'fft_stage.178', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.374+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[1]' should be updated in process function 'fft_stage.177', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.367+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[1]' should be updated in process function 'fft_stage.177', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.359+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_I[0]' should be updated in process function 'bit_reverse76', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.353+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-713] All the elements of global array 'Stage_R[0]' should be updated in process function 'bit_reverse76', otherwise it may not be synthesized correctly." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:32.347+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:425: variable-indexed range selection may cause suboptimal QoR." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:31.486+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file 2.streamlining_tasks/fft.cpp" projectName="fft" solutionName="solution1" date="2023-04-15T16:54:27.893+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: 2.streamlining_tasks/fft.cpp:69:5" projectName="fft" solutionName="solution1" date="2023-04-15T16:54:24.749+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/Virtex-7/Virtex-7_fpv7'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:21.688+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'D:/Xilink/Vivado/2020.1/common/technology/xilinx/Virtex-7/Virtex-7_fpv7.lib'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:20.124+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/Virtex-7/Virtex-7'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:20.119+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'D:/Xilink/Vivado/2020.1/common/technology/xilinx/Virtex-7/Virtex-7.lib'." projectName="fft" solutionName="solution1" date="2023-04-15T16:54:20.114+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

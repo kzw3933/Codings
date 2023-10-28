@@ -1,0 +1,9 @@
+*.log
+.debug
+.autopilot
+.tcls
+.cproject
+.project
+.vitis_hls_log_all.xml
+.apc
+.settings
