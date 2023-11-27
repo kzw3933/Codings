@@ -18,7 +18,7 @@ class Hello extends Module {
     val cntReg = RegInit(0.U(32.W))
     val blkReg = RegInit(0.U(1.W))
 
-    cntReg := CNT_MAX + 1.U
+    cntReg := cntReg + 1.U
     when(cntReg === CNT_MAX) {
         cntReg := 0.U
         blkReg := ~blkReg
