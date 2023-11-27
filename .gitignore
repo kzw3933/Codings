@@ -1,0 +1,10 @@
+.metals
+
+target
+project
+
+test_run_dir
+
+*.fir
+*.v
+*.json
