@@ -1,0 +1,16 @@
+#include <QApplication>
+#include <QResource>
+
+#include "config.h"
+#include "mainscene.h"
+
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    // 注册二进制资源信息
+    QResource::registerResource(GAME_RES_PATH);
+    MainScene w;
+    w.show();
+    return a.exec();
+}
