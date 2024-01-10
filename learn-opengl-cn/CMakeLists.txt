@@ -21,7 +21,7 @@ file(GLOB CPP_SOURCES "src/*.cc")
 set(SOURCES ${C_SOURCES} ${CPP_SOURCES})
 
 # 添加可执行文件
-add_executable(window ${SOURCES})
+add_executable(app ${SOURCES})
 
 # 链接 glfw 库
-target_link_libraries(window glfw3)
+target_link_libraries(app glfw3)
