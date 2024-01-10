@@ -3,15 +3,21 @@
 struct Material {
    sampler2D diffuse;
    sampler2D specular;
-   sampler2D emission;
    float shininess;
 };
 
 struct Light {
    vec3 position;
+   vec3 direction;
+   float cutOff;
+   float outerCutOff;
    vec3 ambient;
    vec3 diffuse;
    vec3 specular;
+
+   float constant;
+   float linear;
+   float quadratic;
 };
 
 
@@ -25,11 +31,10 @@ out vec4 FragColor;
 uniform Light light;
 uniform Material material;
 uniform vec3 viewPos;
-uniform float matrixLight;
-uniform float matrixMove;
 
 void main()
 {
+   
    // 环境光
    vec3 ambient = light.ambient * vec3(texture(material.diffuse, TexCoords));
 
@@ -45,10 +50,20 @@ void main()
    float spec = pow(max(dot(reflectDir, viewDir), 0.0), material.shininess);
    vec3 specular = light.specular * spec * vec3(texture(material.specular, TexCoords));
 
-   // 发光
-   vec3 emission = vec3(matrixLight) * vec3(texture(material.emission, vec2(TexCoords.x, TexCoords.y+matrixMove)));
+   float distance = length(light.position - FragPos);
+   float attenuation = 1.0 / (light.constant + light.linear*distance + light.quadratic*distance*distance);
 
-   vec3 result = ambient + diffuse + specular + emission;
-   
+   ambient *= attenuation;
+   diffuse *= attenuation;
+   specular *= attenuation;
+
+   float theta = dot(lightDir, normalize(-light.direction));
+   float epsilon = light.cutOff - light.outerCutOff;
+   float intensity = clamp((theta - light.outerCutOff)/epsilon, 0.0, 1.0);
+
+   diffuse *= intensity;
+   specular *= intensity;
+
+   vec3 result = ambient + diffuse + specular;
    FragColor = vec4(result, 1.0);
 }
