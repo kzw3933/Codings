@@ -8,6 +8,10 @@ set(CMAKE_CXX_STANDARD 14)
 find_package(glfw3 REQUIRED)
 include_directories(${GLFW_INCLUDE_DIRS})
 
+# 添加assimp库的包含路径
+find_package(assimp REQUIRED)
+include_directories(${assimp_INCLUDE_DIRS})
+
 # 添加 include 目录到头文件搜索路径
 include_directories(include)
 
@@ -24,4 +28,4 @@ set(SOURCES ${C_SOURCES} ${CPP_SOURCES})
 add_executable(app ${SOURCES})
 
 # 链接 glfw 库
-target_link_libraries(app glfw3)
+target_link_libraries(app glfw3 ${assimp_LIBRARIES})
