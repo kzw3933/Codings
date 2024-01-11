@@ -28,4 +28,4 @@ set(SOURCES ${C_SOURCES} ${CPP_SOURCES})
 add_executable(app ${SOURCES})
 
 # 链接 glfw 库
-target_link_libraries(app glfw3 ${assimp_LIBRARIES})
+target_link_libraries(app glfw3 assimp)
