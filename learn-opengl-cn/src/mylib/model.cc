@@ -1,4 +1,4 @@
-#include <model.h>
+#include <mylib/model.h>
 
 
 Model::Model(std::string const& path, bool gamma)

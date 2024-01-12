@@ -14,18 +14,30 @@ include_directories(${assimp_INCLUDE_DIRS})
 
 # 添加 include 目录到头文件搜索路径
 include_directories(include)
+include_directories(include/imgui)
 
 # 添加 .c 文件
-file(GLOB C_SOURCES "src/*.c")
+file(GLOB C_SOURCES "src/glad/*.c" "src/image/*.c")
 
 # 添加 .cc 文件
-file(GLOB CPP_SOURCES "src/*.cc")
+file(GLOB CPP_SOURCES "src/mylib/*.cc" "src/imgui/*.cpp")
 
-# 合并两个源文件列表
-set(SOURCES ${C_SOURCES} ${CPP_SOURCES})
+set(APP_SOURCE
+    src/main.cc
+    ${C_SOURCES} 
+    ${CPP_SOURCES}
+)
+
+set(IMGUI_EXAMPLE_SOURCE
+    src/imgui_example.cc
+    ${C_SOURCES} 
+    ${CPP_SOURCES}
+)
 
 # 添加可执行文件
-add_executable(app ${SOURCES})
+add_executable(app ${APP_SOURCE})
+add_executable(demo ${IMGUI_EXAMPLE_SOURCE})
 
 # 链接 glfw 库
 target_link_libraries(app glfw3 assimp)
+target_link_libraries(demo glfw3 assimp)
