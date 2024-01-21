@@ -1,7 +1,13 @@
 .PHYON: all
 
+CC = gcc
+CFLAGS = -g -Wall -Wextra -pedantic -std=c99
+
 
 all: kilo
 
 kilo: kilo.c
-	$(CC) kilo.c -o kilo -Wall -Wextra -pedantic -std=c99
+	$(CC) $(CFLAGS) -o $@ $^ 
+
+clean:
+	rm -f kilo
