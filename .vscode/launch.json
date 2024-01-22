@@ -6,7 +6,7 @@
         "type": "cppdbg",
         "request": "launch",
         "program": "${workspaceFolder}/kilo/ckilo/kilo",  // 指定可执行文件路径
-        "args": ["/home/jack/Desktop/Projs/Codings/kilo/ckilo/Makefile"],
+        "args": ["/home/jack/Desktop/Projs/Codings/kilo/ckilo/kilo"],
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}",
         "environment": [],
