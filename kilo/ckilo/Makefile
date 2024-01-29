@@ -1,13 +1,13 @@
 .PHYON: all
 
-CC = gcc
-CFLAGS = -g -Wall -Wextra -pedantic -std=c99
+all: build
 
+build:
+	cmake . -B build
 
-all: kilo
-
-kilo: kilo.c
-	$(CC) $(CFLAGS) -o $@ $^ 
+run:
+	./build/kilo
 
 clean:
-	rm -f kilo
+	rm -rf build
+
